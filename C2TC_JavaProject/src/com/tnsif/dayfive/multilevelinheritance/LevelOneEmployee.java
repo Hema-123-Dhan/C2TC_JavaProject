@@ -3,7 +3,7 @@ package com.tnsif.dayfive.multilevelinheritance;
 
 import java.util.Date;
 
-public class LevelOneEmployee extends Employee {
+public class LevelOneEmployee {
     private int noOfShares;
     private String authority;
     
