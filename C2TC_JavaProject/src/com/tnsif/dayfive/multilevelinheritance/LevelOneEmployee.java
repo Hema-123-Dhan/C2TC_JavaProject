@@ -1,21 +1,38 @@
-//Program to demonstrate MultiLevel inheritance
+//Program to define intermediate class inheriting from Employee
 package com.tnsif.dayfive.multilevelinheritance;
 
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class MultilevelInheritanceDemo {
-	public static void main(String[] args) {
+public class LevelOneEmployee extends Employee {
+    private int noOfShares;
+    private String authority;
+    
+    public LevelOneEmployee() {}
+    
+    public LevelOneEmployee(String name, long contactNo, Date dateOfBirth,String deptName, double baseSalary, int noOfShares, String authority) {
+    	super(name,contactNo,dateOfBirth,deptName, baseSalary);
+        this.noOfShares = noOfShares;
+        this.authority=authority;
+    }
 
-		Person p1 = new Person("Atharv", 7878767676l, new Date(2000, 12, 2));
-		System.out.println(p1);
-
-		p1 = new Employee("Pranav", 8080807070l, new Date(1995, 05, 07), "Sales", 45000);
-		System.out.println(p1);
-
-		p1 = new LevelOneEmployee("Madhur", 9880807227l, new Date(1988, 15, 02), "Account", 85000, 200,
-				"Signing Authority");
-		System.out.println(p1);
+	public int getNoOfShares() {
+		return noOfShares;
 	}
 
+	public void setNoOfShares(int noOfShares) {
+		this.noOfShares = noOfShares;
+	}
+
+	public String getAuthority() {
+		return authority;
+	}
+
+	public void setAuthority(String authority) {
+		this.authority = authority;
+	}
+
+	@Override
+	public String toString() {
+		return "LevelOneEmployee ["+super.toString()+"noOfShares=" + noOfShares + ", authority=" + authority + "]";
+	}   
 }
