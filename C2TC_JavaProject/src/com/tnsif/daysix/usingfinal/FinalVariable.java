@@ -8,7 +8,7 @@ public class FinalVariable {
 	final int x = 100;
 
 	// Declare a static blank final variable.
-	final static int Y;
+	final static int Y;u9889
 
 	// Declare & intialize static final variable.
 	final static int Z = 10;
