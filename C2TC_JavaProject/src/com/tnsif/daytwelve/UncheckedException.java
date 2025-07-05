@@ -8,7 +8,7 @@ public class UncheckedException {
 		//try {
 			intArray = new int[] { 1, 2, 3, 4 };
 			System.out.println(intArray[6]);
-		//} catch (ArrayIndexOutOfBoundsException e) {
+		//} catch (ArrayInsdexOutOfBoundsException e) {
 			//System.err.println("Specified index does not exist. "+e.getMessage());
 		//}
 	}
